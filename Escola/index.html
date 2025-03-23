@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gilberto Gil</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="p-4 bg-dark text-white">
+        <nav class="container d-flex justify-content-center align-items-center">
+            <ul class="nav d-flex justify-content-center">
+                <li class="nav-item"><a class="nav-link text-white" href="#inicio">Início</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#galeria">Galeria</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>    
+
+    <main class="container my-5">
+        <section id="inicio" class="text-center my-5">
+            <h1 class="display-4 text-primary fw-bold">Conheça: Gilberto Gil</h1>
+            <img src="https://gilbertogil.com.br/wp-content/uploads/2021/11/gilbertogil.com.br-fotografo-niclasweber-1200x800.jpg" 
+                 class="img-fluid rounded-circle mb-4" 
+                 alt="Gilberto Gil" 
+                 style="width: 250px; height: 250px; object-fit: cover; border-radius: 50%;">
+                 <button class="btn btn-primary btn-lg fw-semibold d-block mx-auto" id="conhecerBtn">Quero conhecer!</button>
+        </section>    
+
+        <section id="tropicalia" class="my-5 pt-6 text-center">
+            <div class="container d-flex flex-column align-items-center">
+                <h2 class="d-flex align-items-center" style="margin-left: 80px;">
+                    Quem foi Gilberto Gil? 
+                    <button class="btn btn-link ms-0" data-bs-toggle="collapse" data-bs-target="#gilbertoGilText">
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                </h2>                
+                <div id="gilbertoGilText" class="collapse">
+                    <p class="p-2">Gilberto Gil é um dos maiores músicos e compositores brasileiros, nascido em Salvador, em 1942. Ícone do movimento tropicalista dos anos 1960, ele misturou música brasileira com influências internacionais, criando um estilo único. Entre seus maiores sucessos estão músicas como "Aquele Abraço" e "Toda Menina Baiana". Além de sua carreira musical, Gil também foi Ministro da Cultura, defendendo políticas culturais no Brasil. Reconhecido mundialmente, ele continua sendo uma referência na música e na cultura brasileira.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeria" class="text-center my-5">
+            <h2 class="d-flex align-items-center" style="margin-left: 580px;">
+                Galeria 
+                <button class="btn btn-link ms-0" data-bs-toggle="collapse" data-bs-target="#galeriaContent" id="toggleGaleria">
+                    <i class="bi bi-chevron-down" id="arrowIcon"></i>
+                </button>
+            </h2>
+            <div id="galeriaContent" class="collapse">
+                <div class="container mt-3 p-3 d-flex flex-wrap justify-content-center gap-3">
+                    <img src="https://gilbertogil.com.br/wp-content/uploads/2021/11/gilbertogil.com.br-fotografo-irakerly-12-1200x960.jpg" class="img-fluid rounded-5" width="300" height="200" loading="lazy" alt="Imagem 1">
+                    <img src="https://gilbertogil.com.br/wp-content/uploads/2021/11/gilbertogil.com.br-foto-tatiana-valenca-fotografapelaeuropa33-1200x800.jpg" class="img-fluid rounded-5" width="300" height="200" loading="lazy" alt="Imagem 2">
+                    <img src="https://gilbertogil.com.br/wp-content/uploads/2020/10/gilbertogil.com.br-bw-20200913-elle-gil-01-0110-1200x1200.jpg" class="img-fluid rounded-5" width="300" height="200" loading="lazy" alt="Imagem 3">
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="my-5">
+            <div class="container p-5 bg-light rounded-5">
+                <h2 class="mb-3 text-center">Entre em contato</h2>
+                <form>
+                    <div class="mb-3">
+                        <label for="nome" class="form-label">Nome</label>
+                        <input type="text" id="nome" class="form-control" placeholder="Digite seu nome">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" class="form-control" placeholder="Digite seu email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="mensagem" class="form-label">Mensagem</label>
+                        <textarea id="mensagem" class="form-control" rows="4" placeholder="Escreva sua mensagem"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary btn-lg rounded-pill">Enviar mensagem</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center p-3 bg-dark text-white">
+        <p>Acesse minhas redes:</p>
+        <a href="https://wa.me/5545988312189" target="_blank"><i class="bi bi-whatsapp me-2"></i></a>
+        <a href="https://www.instagram.com/molossz/" target="_blank"><i class="bi bi-instagram me-2"></i></a>
+        <p class="mt-3">Desenvolvido por Start by Alura. Projeto fictício sem fins comerciais.</p>
+    </footer>    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById("conhecerBtn").addEventListener("click", function() {
+            // Aciona o clique no botão que expande o conteúdo sobre Gilberto Gil
+            document.querySelector('[data-bs-target="#gilbertoGilText"]').click();
+        });
+
+        // Função para alterar a seta para cima/baixo
+        document.getElementById("toggleGaleria").addEventListener("click", function() {
+            var arrowIcon = document.getElementById("arrowIcon");
+            if (arrowIcon.classList.contains("bi-chevron-down")) {
+                arrowIcon.classList.remove("bi-chevron-down");
+                arrowIcon.classList.add("bi-chevron-up");
+            } else {
+                arrowIcon.classList.remove("bi-chevron-up");
+                arrowIcon.classList.add("bi-chevron-down");
+            }
+        });
+    </script>
+  
+</body>
+
+</html>
